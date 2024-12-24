@@ -23,6 +23,7 @@ class Solution {
 };
 
 
+
 //{ Driver Code Starts.
 
 // Driver program to test above functions
@@ -49,6 +50,7 @@ int main() {
             cout << e << " ";
         }
         cout << endl;
+        cout << "~" << endl;
     }
     return 0;
 }
