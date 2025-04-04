@@ -5,27 +5,26 @@ using namespace std;
 
 
 // } Driver Code Ends
+
 // User function Template for C++
 class Solution {
   public:
     pair<int, int> getMinMax(vector<int> arr) {
         int n = arr.size();
-        
-        int smallest = arr[0];
+        int min = arr[0];
+        int max = arr[n-1];
         for(int i = 0; i < n; i++){
-            if(arr[i]<smallest){
-                smallest = arr[i] ;
+            if(arr[i] > max){
+                max = arr[i];
+            }
+            else if(arr[i] < min){
+                min = arr[i];
             }
         }
-        int largest = arr[0];
-        for(int i = 0; i < n; i++){
-            if(arr[i]>largest){
-                largest = arr[i];
-            }
-        }
-        return{smallest,largest};
+        return{min, max};
     }
 };
+
 
 //{ Driver Code Starts.
 
