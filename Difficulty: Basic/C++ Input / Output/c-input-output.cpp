@@ -3,12 +3,15 @@
 using namespace std; 
 
 // } Driver Code Ends
-class Solution{   
-public:
-    int multiplication(int A, int B){
+
+class Solution {
+  public:
+    int multiplication(int A, int B) {
         return A*B;
+        
     }
 };
+
 
 //{ Driver Code Starts.
 int main() 
