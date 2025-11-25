@@ -2,16 +2,21 @@ class Solution {
   public:
     void binSort(vector<int> &arr) {
         // code here
+        int i =0;
+        int j =arr.size()-1;
         
-        int n = arr.size();
-        
-        int j = 0;
-        for(int i = 0; i < n; i++){
-            if(arr[i] == 0){
+        while(i <= j){
+            if(arr[i] == 1 && arr[j] == 0){
                 swap(arr[i],arr[j]);
-                j++;
+                i++;
+                j--;
+            }
+            else if(arr[i] == 1 && arr[j] != 0){
+                j--;
+            }
+            else{
+                i++;
             }
         }
-        
     }
 };
