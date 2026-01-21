@@ -4,19 +4,12 @@ class Solution:
     #Function to rotate an array by d elements in counter-clockwise direction. 
     def rotateArr(self, arr, d):
         #Your code here
-        n = len(arr)
-        k = d % n
+        h = len(arr)
+        l = 0
+        m = d % h
         
-        lst = []
-    
-        
-        for i in range(k, n):
-            lst.append(arr[i])
-            
-        for i in range(k):
-            lst.append(arr[i])  
-            
-        for i in range(len(lst)):
-            arr[i] = lst[i]
+        arr[l:m] = arr[l:m] [::-1]
+        arr[m:h] = arr[m:h] [::-1]
+        arr[l:h] = arr[l:h][::-1]
         
         return 
